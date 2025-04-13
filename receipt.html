@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>23BCE1777 - Order Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4d4c9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #8b8f71;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            color: white;
+        }
+        pre {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        button {
+            width: 100%;
+            background-color: #c9a36e;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #a38255;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            document.getElementById("receipt").innerText = localStorage.getItem("orderSummary");
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Receipt</h2>
+        <pre id="receipt"></pre>
+        <button onclick="window.location.href='GroceryOrderForm.html'">Back to Form</button>
+    </div>
+</body>
+</html>

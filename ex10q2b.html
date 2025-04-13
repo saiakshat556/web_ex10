@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex10q2b(23BCE1777)</title>
+    <script>
+        function updateUsername() {
+            document.getElementsByName("username")[0].value = "John Doe";
+        }
+
+        function getSelectedGender() {
+            let genderOptions = document.getElementsByName("gender");
+            for (let i = 0; i < genderOptions.length; i++) {
+                if (genderOptions[i].checked) {
+                    alert("Selected Gender: " + genderOptions[i].value);
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>Username:</label>
+    <input type="text" name="username">
+    <button onclick="updateUsername()">Set Username</button>
+    <br><br>
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <button onclick="getSelectedGender()">Get Selected Gender</button>
+</body>
+</html>

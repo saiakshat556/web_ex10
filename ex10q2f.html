@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex10q2f(23BCE1777)</title>
+    <script>
+        function updateInfoParagraph() {
+            let infoParagraph = document.querySelector("p.info");
+            if (infoParagraph) {
+                infoParagraph.textContent = "This is the first info paragraph";
+            }
+        }
+
+        function checkFirstRadioButton() {
+            let firstRadio = document.querySelector("input[name='gender']");
+            if (firstRadio) {
+                firstRadio.checked = true;
+            }
+        }
+
+        function printInfoParagraphs() {
+            let infoParagraphs = document.querySelectorAll("p.info");
+            infoParagraphs.forEach(paragraph => console.log(paragraph.textContent));
+        }
+
+        function checkAllHobbies() {
+            let hobbies = document.querySelectorAll("input.hobby");
+            hobbies.forEach(hobby => {
+                hobby.checked = true;
+                console.log(hobby.value);
+            });
+        }
+    </script>
+</head>
+<body>
+    <p class="info">Original text</p>
+    <p class="info">Another info paragraph</p>
+    <button onclick="updateInfoParagraph()">Update Info Paragraph</button>
+    <button onclick="printInfoParagraphs()">Print Info Paragraphs</button>
+    <br><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <button onclick="checkFirstRadioButton()">Check First Radio</button>
+    <br><br>
+    <input type="checkbox" class="hobby" value="Dancing"> Reading
+    <input type="checkbox" class="hobby" value="Gaming"> Gaming
+    <input type="checkbox" class="hobby" value="Music"> Sports
+    <button onclick="checkAllHobbies()">Check All Hobbies</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex10q2e(23BCE1777)</title>
+    <script>
+        function updateInfoParagraph() {
+            let infoParagraph = document.querySelector("p.info");
+            if (infoParagraph) {
+                infoParagraph.textContent = "This is updated Paragraph (after clicking)";
+            }
+        }
+
+        function checkFirstRadioButton() {
+            let firstRadio = document.querySelector("input[name='gender']");
+            if (firstRadio) {
+                firstRadio.checked = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="info">Original Paragraph (before clicking)</p>
+    <p class="info">Another info paragraph</p>
+    <button onclick="updateInfoParagraph()">Update Info Paragraph</button>
+    <br><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <button onclick="checkFirstRadioButton()">Check First Radio</button>
+</body>
+</html>

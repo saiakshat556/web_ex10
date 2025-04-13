@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex10q2c(23BCE1777)</title>
+    <script>
+        function countParagraphs() {
+            let paragraphs = document.getElementsByTagName("p").length;
+            alert("Total <p> elements: " + paragraphs);
+        }
+
+        function listItems() {
+            let items = document.getElementsByTagName("li");
+            for (let i = 0; i < items.length; i++) {
+                console.log(items[i].textContent);
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <button onclick="countParagraphs()">Count Paragraphs</button>
+    <br><br>
+    <ul>
+        <li>Apple</li>
+        <li>Bannana</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+    </ul>
+    <button onclick="listItems()">List Items</button>
+</body>
+</html>
